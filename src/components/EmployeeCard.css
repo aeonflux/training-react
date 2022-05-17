@@ -1,0 +1,32 @@
+.employee-card {
+    background-color: #c8cace;
+    border: 2px solid orange;
+    width: 20rem;
+    height: 15rem;
+    margin-right: 1rem;
+  }
+  
+  .employee-icon {
+    width: 12rem;
+    height: 7rem;
+  }
+  
+  .card-label {
+    color: #c8cace;
+    font-weight: 500;
+  }
+  
+  .card-value {
+    color: #61dafb
+  }
+  
+  .card-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .card-button {
+      margin-top: 1rem;
+      background-color: orange;
+  }
