@@ -1,7 +1,7 @@
 import React from 'react';
 import './EmployeeCard.css'
 
-const EmployeeCard = ({ name, jobTitle, department}) => {
+const EmployeeCard = ({ name, jobTitle, department , onPress}) => {
 
     return(
         <div className="employee-card">
@@ -17,7 +17,7 @@ const EmployeeCard = ({ name, jobTitle, department}) => {
                     </div>
                     <button 
                         className="card-button" 
-                        onClick={()=> console.log('You clicked on' + name  + department)}
+                        onClick={onPress}
                     >
                         See Profile
                     </button>
