@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { EmployeeCard } from "./components/EmployeeCard/EmployeeCard";
 import { EmployeeView } from "./components/EmployeeView/EmployeeView";
+import { SearchBar } from "./components/SearchBar/SearchBar";
 
 function App() {
   const [selectedEmployee, setSelectedEmployee] = useState(null);
@@ -153,6 +154,7 @@ function App() {
           qualifications={employeeData[selectedEmployee].qualifications}
         />
       )}
+      <SearchBar />
     </div>
   );
 }
