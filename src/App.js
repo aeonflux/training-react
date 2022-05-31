@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./App.css";
 import { EmployeeCard } from "./components/EmployeeCard/EmployeeCard";
 import { EmployeeView } from "./components/EmployeeView/EmployeeView";
-import { SearchBar } from "./components/SearchBar/SearchBar";
+import { SearchBar } from "./components/Searchbar/SearchBar";
 
 function App() {
   const [selectedEmployee, setSelectedEmployee] = useState(null);
@@ -11,6 +11,7 @@ function App() {
       name: "Danica Mendez",
       jobTitle: "HR Professional",
       department: "Human Resources",
+      image: "https://static.dazzling.news/img/articles/3882/800x800/5aa7dd877388d_man0.jpg",
       personalInformation: {
         firstName: "Danica",
         lastName: "Mendez",
@@ -46,6 +47,7 @@ function App() {
       name: "Toni Carpio",
       jobTitle: "Software Engineer",
       department: "Engineering",
+      image: "https://static.dazzling.news/img/articles/3882/800x800/5aa7dd877388d_man0.jpg",
       personalInformation: {
         firstName: "Toni",
         lastName: "Carpio",
@@ -81,6 +83,7 @@ function App() {
       name: "Ethyl",
       jobTitle: "Software Engineer",
       department: "Engineering",
+      image: "https://static.dazzling.news/img/articles/3882/800x800/5aa7dd877388d_man0.jpg",
       personalInformation: {
         firstName: "Ethyl",
         lastName: "De Vera",
@@ -122,12 +125,21 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Team Viewer</h1>
+      <div className="grid gap-10 grid-cols-2">
+        <div>
+           <h1>Team Viewer</h1>
+        </div>
+        <div>
+           <SearchBar />
+        </div>
+      </div>
+
       <div className="card-container">
         {employeeData.map((employee, index) => {
           return (
             <EmployeeCard
               name={employee.name}
+              image={employee.image}
               jobTitle={employee.jobTitle}
               department={employee.department}
               onPress={() => {
@@ -154,7 +166,6 @@ function App() {
           qualifications={employeeData[selectedEmployee].qualifications}
         />
       )}
-      <SearchBar />
     </div>
   );
 }

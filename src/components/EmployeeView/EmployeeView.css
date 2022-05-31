@@ -1,0 +1,50 @@
+.employee-card {
+    /* background-color: #c8cace;
+    border: 2px solid orange;
+    width: 20rem;
+    height: 15rem;
+    margin-right: 1rem; */
+    @apply bg-white rounded-lg m-3 px-5 drop-shadow-2xl text-center;
+  }
+  
+  .employee-icon {
+    @apply w-56 h-24 rounded-full;
+  }
+  
+  .card-label {
+    @apply font-normal my-4;
+  }
+  
+  .card-value {
+    @apply text-2xl my-4;
+  }
+  
+  .card-container {
+    /* display: flex;
+    flex-direction: row;
+    justify-content: center; */
+    @apply flex flex-row justify-center;
+  }
+  
+  .card-button {
+    /* margin-top: 1rem;
+    background-color: orange; */
+    @apply m-2 p-2 rounded-lg bg-orange-500 text-white hover:bg-orange-200;
+  }
+
+  .container {
+    @apply flex flex-row justify-evenly bg-white  drop-shadow-2xl rounded-sm p-10 text-left;
+  }
+
+  .column-label {
+    @apply  text-lg text-pink-600 underline;
+  }
+
+  .column-entry-label {
+    @apply  text-lg text-black;
+  }
+
+  .column-entry-value {
+    @apply  text-lg text-pink-600 font-extralight;
+  }
+  
