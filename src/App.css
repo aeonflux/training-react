@@ -39,5 +39,6 @@
 }
 
 .selection {
-  color: orange;
+  /* color: orange; */
+  @apply text-black text-lg;
 }

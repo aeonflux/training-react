@@ -1,10 +1,12 @@
 .container {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center; */
+  @apply flex flex-row justify-between items-center;
+
 }
 
 .column {
-  width: 300px;
-  color: rgb(3, 194, 194);
+  @apply text-black text-lg;
 }

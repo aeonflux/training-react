@@ -22,7 +22,10 @@ const EmployeeCard = ({ name, jobTitle, department, onPress }) => {
       <div className="card-label">
         <span>{department}</span>
       </div>
-
+      {/* <div>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"/>
+        <a href="#" class="fa fa-linkedin"></a>
+      </div> */}
       <button className="card-button" onClick={onPress}>
         See Profile
       </button>

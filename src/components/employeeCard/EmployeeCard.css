@@ -20,16 +20,16 @@
 }
 
 .card-container {
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: center; */
+  @apply flex flex-row justify-center;
 }
 
 .card-button {
-  margin-top: 1rem;
-  background-color: orange;
+  /* margin-top: 1rem;
+  background-color: orange; */
+  @apply m-2 p-2 rounded-lg bg-orange-500 text-white hover:bg-orange-200;
 }
 
-.image-wrapper {
-  @apply rounded-full;
-}
+

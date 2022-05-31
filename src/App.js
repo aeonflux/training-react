@@ -121,7 +121,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Ethyl's Employee Database</h1>
+      <h1>Team Viewer</h1>
       <div className="card-container">
         {employeeData.map((employee, index) => {
           return (
