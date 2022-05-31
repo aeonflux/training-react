@@ -1,15 +1,19 @@
 import { React, useState } from "react";
-import { App } from "./App";
+import "./SearchBar.css";
 
-function EmployeeList( {employeeData}) {
-    // const [search, setSearch] = useState ("");
+const SearchBar = () => (
+  <form action="/" method="get">
+    <label htmlFor="header-search">
+      <span className="hidden">Search Employee</span>
+    </label>
+    <input
+      type="text"
+      id="header-search"
+      placeholder="Search employee"
+      name="s"
+    />
+    <button type="submit">Search</button>
+  </form>
+);
 
-    // })
-    return (
-        <ul>
-            {employeeData.map ((employee, index) => 
-                <li key={`employee-${index}`}>{employee.name}</li>)}
-        </ul>
-    )
-}
-
+export { SearchBar };
