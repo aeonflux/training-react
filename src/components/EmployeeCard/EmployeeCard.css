@@ -1,35 +1,32 @@
 .employee-card {
-    /* background-color: #c8cace;
+  /* background-color: #c8cace;
     border: 2px solid orange;
     width: 20rem;
     height: 15rem;
     margin-right: 1rem; */
-    @apply bg-white rounded-lg m-3 px-5 drop-shadow-2xl text-center;
-  }
-  
-  .employee-icon {
-  
-  }
-  
-  .card-name {
-    @apply font-bold mt-16 text-xl;
-  }
-  
-  .card-desc{
-    @apply text-base my-2
-  }
-  
-  .card-container {
-    /* display: flex;
+  @apply bg-white rounded-lg m-3 px-5 drop-shadow-2xl text-center;
+}
+
+.employee-icon {
+}
+
+.card-name {
+  @apply font-bold mt-16 text-xl;
+}
+
+.card-desc {
+  @apply text-base my-2;
+}
+
+.card-container {
+  /* display: flex;
     flex-direction: row;
     justify-content: center; */
-    @apply flex flex-row justify-center;
-  }
-  
-  .card-button {
-    /* margin-top: 1rem;
+  @apply flex flex-row justify-center py-5 my-5;
+}
+
+.card-button {
+  /* margin-top: 1rem;
     background-color: orange; */
-    @apply m-2 p-2 rounded-lg bg-orange-500 text-white hover:bg-orange-200;
-  }
-  
-  
+  @apply m-2 p-2 rounded-lg bg-orange-500 text-white hover:bg-orange-200;
+}
