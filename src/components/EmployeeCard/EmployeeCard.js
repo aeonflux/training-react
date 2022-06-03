@@ -5,15 +5,17 @@ const EmployeeCard = ({ name, jobTitle, department , onPress}) => {
 
     return(
         <div className="employee-card">
-                    <img src="https://www.achievers.com/wp-content/uploads/2020/05/05-27-20-2.jpg" className="employee-icon" />
-                    <div className="card-label">
-                      Name: <span className="card-value">{name}</span>
+                    <div className="image-wrapper">
+                       <img src="https://www.achievers.com/wp-content/uploads/2020/05/05-27-20-2.jpg" className="employee-icon" />
                     </div>
                     <div className="card-label">
-                      Job Title: <span className="card-value">{jobTitle}</span>
+                       {name}
                     </div>
-                    <div className="card-label">
-                      Department: <span className="card-value">{department}</span>
+                    <div className="card-sub-label">
+                         {jobTitle}
+                    </div>
+                    <div className="card-sub-label">
+                         {department}
                     </div>
                     <button 
                         className="card-button" 

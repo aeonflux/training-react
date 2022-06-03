@@ -1,9 +1,5 @@
-.App {
-  text-align: center;
-}
-
-*{
-  background-color: #282c34;
+.app{
+  @apply h-screen bg-gradient-to-r from-pink-400 via-purple-700 to-blue-500;
 }
 
 .App-logo {

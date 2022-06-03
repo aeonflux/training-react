@@ -1,7 +1,6 @@
+
 .container{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    @apply flex flex-row justify-center bg-red-500;
 }
 
 .column {

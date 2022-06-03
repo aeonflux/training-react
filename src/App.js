@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
-import { EmployeeCard } from './components/EmployeeCard/EmployeeCard';
-import { EmployeeView } from './components/EmployeeView/EmployeeView'
+// import { EmployeeCard } from './components/EmployeeCard/EmployeeCard';
+// import { EmployeeView } from './components/EmployeeView/EmployeeView';
+import { useForm } from "react-hook-form";
 
 function App() {
 
@@ -10,7 +11,7 @@ function App() {
 
   const employeeData = [
   {
-    name: "Danioa Mendez",
+    name: "Danica Mendez",
     jobTitle: "HR Professional",
     department: 'Human Resources',
     personalInformation: {
@@ -120,45 +121,57 @@ const handleEmployeeChange = (index) => {
   setSelectedEmployee(index)
 }
 
+  const { register, handleSubmit, watch, formState: { errors } } = useForm();
+
+  const handleFormSubmit = formValues => console.log(formValues);
 
   return (
-    <div className="App">
+    <div className="app">
         <h1>
-          Ethyl's Employee Database
+          Personal Info
         </h1>
-        <div className="card-container">
-            {
-              employeeData.map((employee, index)=>{
-                return(
-                  <EmployeeCard
-                    name={employee.name}
-                    jobTitle={employee.jobTitle}
-                    department={employee.department}
-                    onPress={() => {
-                      handleEmployeeChange(index)
-                    }}
-                  />
-                )})
-            }
-        </div>
-        {
-            selectedEmployee === 0 && 
-            <div className="selection">
-               THIS IS FOR SELECTION 1 - Danica ONLY 
-               <EmployeeView
-                  personalInfo={employeeData[0].personalInformation}
+        <div className="card-container bg-white">
+           <form onSubmit={handleSubmit(handleFormSubmit)}>
+             <div className="flex flex-col mb-4">
+                <label for="first-name-field" className="text-pink-700 text-sm"> First Name </label>
+                <input 
+                  type="text" 
+                  className="border-b-2 border-pink-500 w-2/6"
+                  placeholder="Enter your first name... " {...register("first-name-field", { required: true })}
                 />
-            </div>
-        }
-        {
-            selectedEmployee === 1 && 
-            <div className="selection"> 
-              THIS IS FOR SELECTION 2 - Toni ONLY 
-            </div>
-        }
-        {
-            selectedEmployee === 2 && <div className="selection"> THIS IS FOR SELECTION 3 - Ethyl ONLY </div>
-        }
+              </div>
+              <div className="flex flex-col mb-4">
+                <label for="first-name-field" className="text-pink-700 text-sm"> Last Name </label>
+                <input 
+                  type="text" 
+                  className="border-b-2 border-pink-500 w-2/6"
+                  placeholder="Enter your last name... " {...register("last-name-field", { required: true })}/>
+              </div>
+              <div className="flex flex-col mb-4">
+                <label for="first-name-field" className="text-pink-700 text-sm"> Birthdate </label>
+                <input 
+                 type="date" 
+                 className="border-b-2 border-pink-500 w-2/6"
+                 placeholder="YYYY-MM-DD" {...register("birthdate-field", { required: true })}
+                />
+              </div>
+   
+              <br/>
+                <select
+                  {...register("sex-field", { required: true })}
+                >
+                  <option value="Female">Female</option>
+                  <option value="Male">Male</option>
+                </select>
+              <br/>
+              <input 
+                 type="number" 
+                 placeholder="Enter your age" {...register("age-field", { required: true })}
+                />
+              <br/>
+              <button type="submit">Submit</button>
+           </form>
+        </div>
 
     </div>
   );
