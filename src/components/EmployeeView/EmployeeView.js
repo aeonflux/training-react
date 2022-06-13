@@ -42,21 +42,27 @@ const EmployeeView = ({ personalInfo, payroll, benefits, qualifications }) => {
         <div className="container">
           <div className="column">
             <h1 className="column-label">Payroll</h1>
-            <p>Base Salary = {payroll.baseSalary}</p>
-            <p>Hiring Date = {payroll.hiringDate}</p>
+            <p>
+              {`Base Salary `}
+              <span className="column-entry-value">{payroll.baseSalary}</span>
+            </p>
+            <p>
+              {`Hiring Date `}
+              <span className="column-entry-value">{payroll.hiringDate}</span>
+            </p>
           </div>
           <div className="column">
-            F<h1 className="column-label">Qualifications</h1>
+            <h1 className="column-label">Qualifications</h1>
             <span> Education</span>
             <p>primary = {qualifications.education.primary}</p>
             <p>secondary = {qualifications.education.secondary}</p>
             <p>tertiary = {qualifications.education.tertiary}</p>
-            <div>
-              Tech Skills
+            <p>Tech Skills</p>
+            <div className="flex">
               {qualifications.techSkills.map((techskill, index) => (
                 <div
                   key={index}
-                  className="w-/12 h-10 bg-pink-700 text-white rounded-lg m-3"
+                  className="p-1 first-letter:text-center bg-pink-700 text-white rounded-lg m-3"
                 >
                   {techskill.skill}
                 </div>

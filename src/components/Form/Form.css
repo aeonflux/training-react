@@ -1,0 +1,19 @@
+.form-box {
+  /* width: 100%;
+  max-width: 54rem;
+  margin: 0 auto;
+  padding: 50px;
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.1);
+  justify-content: center; */
+  @apply flex flex-col;
+}
+
+.form-fields {
+  @apply text-left text-pink-500 w-full m-5;
+}
+
+.form-label {
+  @apply block text-sm mb-2;
+}

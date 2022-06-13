@@ -1,6 +1,6 @@
 .App {
   text-align: center;
-  @apply h-screen bg-gradient-to-r from-pink-400 via-purple-700 to-blue-500;
+  @apply h-fit bg-gradient-to-r from-pink-400 via-purple-700 to-blue-500;
 }
 
 .App-logo {
